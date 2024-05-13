@@ -23,7 +23,10 @@ def main():
         if form.hidden.data == "text":
             if form.text.data != '':
                 # Analyze sentiment of tweet text
-                tweet_sentiment = analyze_sentiment(form.text.data)
+                sentiment_result = analyze_sentiment(form.text.data)
+                tweet_sentiment = sorted(sentiment_result, key=lambda x: ('positive', 'neutral', 'negative').index(x[0]))
+                print(tweet_sentiment)
+
                 # Calculating top 3 emotions with %
                 all_emotions = analyze_emotion(form.text.data)
                 tweet_emotion = []
@@ -56,8 +59,9 @@ def main():
                 caption = caption_image(image_path)
                 
                 # Analyze sentiment of image
-                tweet_sentiment = analyze_sentiment(caption)
-                
+                sentiment_result = analyze_sentiment(caption)
+                tweet_sentiment = sorted(sentiment_result, key=lambda x: ('positive', 'neutral', 'negative').index(x[0]))
+
                 # Analyze emotion portrayed by image
                 all_emotions = analyze_emotion(caption)
                 tweet_emotion = []
