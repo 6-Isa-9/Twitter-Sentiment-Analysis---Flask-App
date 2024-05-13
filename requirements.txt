@@ -1,0 +1,7 @@
+flask
+flask-wtf
+transformers
+numpy
+scipy
+pillow
+os

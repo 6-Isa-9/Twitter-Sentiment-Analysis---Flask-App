@@ -1,0 +1,267 @@
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: #192734;
+    margin: 0;
+    padding: 0;
+}
+
+.holder {
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template-rows: 0.5fr 9fr;
+}
+
+.navbar {
+    padding: 1vw;
+
+    background-color: #15202B;
+    border-bottom: 2px solid #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar svg {
+    width: 3vh;
+    height: 3vh;
+
+    margin-right: 1vw;
+    color: #55ACEE;
+}
+.title {
+    font-size: 3vh;
+    margin: 0;
+    color: #fff;
+}
+
+.main {
+    padding: 1vw;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Input holder styles */
+
+.input-holder {
+    display: grid;
+    grid-template-columns: 5fr 0.1fr 5fr;
+
+    width: 80%;
+    height: 60%;
+
+    border-radius: 0.65vw;
+
+    background-color: #15202B;
+}
+
+.divider-holder {
+    display: flex;
+    flex-direction: column;
+}
+.input-holder .divider-holder .divider {
+    margin: 0.5vw auto;
+    height: 100%;
+    width: 0.175vw;
+    border-radius: 0.5vw;
+    background-color: #8899a69f;
+}
+
+.text-input, .image-input {
+    display: flex;
+    flex-direction: column;
+}
+
+/* TEXT INPUT STYLES */
+.text-input textarea {
+    resize: none;
+    outline: none;
+    
+    border: none;
+    border-radius: 0.35vw;
+
+    height: 90%;
+    margin: 0.75vw 0.75vw;
+
+    background-color: transparent;
+    color: #fff;
+
+    font-size: larger;
+    font-family: "Noto Sans JP", sans-serif;;
+
+    transition: .35s ease-in-out;
+}
+.text-input textarea.error {
+    border: 1px solid red;
+}
+.text-input .dummy {
+    margin: 0 0.75vw 0.75vw 0.75vw;
+    text-align: center;
+}
+.text-input .dummy button {
+    border: none;
+    outline: none;
+
+    background-color: #3590d6;
+    color: #fff;
+    border-radius: 0.35vw;
+
+    width: 6vw;
+    height: 2vw;
+
+    font-size: large;
+
+    transition: 0.25s ease-in-out;
+}
+.text-input .dummy button:hover {
+    background-color: #0e548a;
+    cursor: pointer;
+}
+.text-input .dummy button.disabled {
+    cursor: auto;
+    background-color: #5a5a5ab0;
+}
+
+.text-limit {
+    margin-top: 0;
+    text-align: right;
+    color: #afafaf;
+}
+.text-limit.error {
+    color: red;
+}
+
+
+/* IMAGE INPUT STYLES */
+.image-input label {
+    height: 90%;
+    background-color: #0e548a1a;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 6vw 7vw 2vw 7vw;
+    border: 2px dashed #0e548a ;
+    border-radius: 0.35vw;
+
+    cursor: pointer;
+}
+.image-input label svg {
+    margin-top: 1vw;
+    color: #0e548a;
+}
+
+.selection {
+    text-align: center;
+    margin: 0 2vw 2vw 2vw;
+
+    color: #afafaf;
+}
+.selection:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.image-input .dummy {
+    margin: 0 0.75vw 0.75vw 0.75vw;
+    text-align: center;
+}
+
+.image-input .dummy button {
+    border: none;
+    outline: none;
+
+    background-color: #3590d6;
+    color: #fff;
+    border-radius: 0.35vw;
+
+    width: 6vw;
+    height: 2vw;
+
+    font-size: large;
+
+    transition: 0.25s ease-in-out;
+}
+.image-input .dummy button:hover {
+    background-color: #0e548a;
+    cursor: pointer;
+}
+.image-input .dummy button.disabled {
+    cursor: auto;
+    background-color: #5a5a5ab0;
+}
+
+
+
+/* RESULT STYLES */
+.result-holder {
+    background-color: #15202B;
+
+    width: 80%;
+    max-height: 75%;
+    
+    margin-top: 2vw;
+
+    border-radius: 0.65vw;
+
+    display: grid;
+    grid-template-columns: 5fr 0.1fr 5fr;
+}
+.result {
+    height: max-content;
+
+    margin: 2vw 0;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+}
+.result div {
+    text-align: center;
+}
+.result div p {
+    margin: 0;
+}
+
+.result-holder .divider-holder .divider {
+    margin: 0.5vw auto;
+    height: 100%;
+    width: 0.175vw;
+    border-radius: 0.5vw;
+    background-color: #8899a69f;
+}
+
+.result-text {
+    display: flex;
+    flex-direction: column;
+
+    margin: 1vw;
+}
+.result-text p {
+    margin: 0;
+}
+.result-text .emotions {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 1vw;
+    color: #0e548a;
+}
+
+.result-text .result-image {
+    display: flex;
+    justify-content: center;
+}
+.result-text .result-image img {
+    height: fit-content;
+    max-width: 30vw;
+
+    margin: 1vw;
+}
